@@ -4,24 +4,23 @@ import { Button, Image, StyleSheet, Text, TextInput, View,TouchableOpacity } fro
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-export default function Login(){
-  const navigation = useNavigation();
+export default function create(){
+
+  const navigation=useNavigation()
 
   return (
-
     
     <View style={styles.container}>
       {/* <Image source={require('./assets/headerLogo.png')}/> */}
 
-      <Text style={styles.txtBienve}>Bienvenido!</Text>
-      <Text style={styles.titleAcc}>Ingresar con tu cuenta</Text>
+      <Text style={styles.txtBienve}>Crear Cuenta</Text>
 
-      <TextInput style={styles.txtInput} placeholder='multimedios@gmail.com'></TextInput>
-      <TextInput style={styles.txtInput} placeholder='Contraseña:'></TextInput>
+      <Text style={styles.titleAcc} >Igrese los siguientes datos:</Text>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Recuperar_c1")}>   
-      <Text style={styles.txtPass} >¿Has olvidado su contraseña?</Text>
-      </TouchableOpacity>   
+      <TextInput style={styles.txtInput} placeholder='Nombre completo'></TextInput>
+      <TextInput style={styles.txtInput} placeholder='Correo electrónico'></TextInput>
+      <TextInput style={styles.txtInput} placeholder='Contraseña'></TextInput>
+ 
 
       <TouchableOpacity >
       <LinearGradient
@@ -30,13 +29,13 @@ export default function Login(){
         end={{x:1, y:1}}
         style={styles.btnLogin}
         >
-        <Text style={styles.txtLogin} >Iniciar Sesion</Text>
+        <Text style={styles.txtLogin} >Regístrate</Text>
       </LinearGradient>     
       </TouchableOpacity>
 
-      <Text style={styles.txtCuenta}>No tienes cuenta?</Text>
-      <TouchableOpacity onPress={() => navigation.navigate("Formulario")}>
-      <Text style={styles.txtRegistrarse}>Registrarse</Text>
+      <Text style={styles.txtCuenta}>Ya tienes cuenta?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+      <Text style={styles.txtRegistrarse}>Iniciar Sesión</Text>
       </TouchableOpacity>  
 
       <StatusBar style="auto" />
@@ -46,7 +45,6 @@ export default function Login(){
   );
 
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -70,6 +68,7 @@ const styles = StyleSheet.create({
     color: 'gray',
     textAlign: 'left',
     paddingLeft: 30,
+    marginTop: 60,
   },
 
   txtInput: {

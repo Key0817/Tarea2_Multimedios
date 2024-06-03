@@ -4,7 +4,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Login from "./Login_App/login";
-import recuperar_1 from "./Recuperar1/recuperar_c1";
+import recuperar_1 from "./Recuperar_Cuenta/recuperar_c1";
+import recuperar_c2 from "./Recuperar_Cuenta/recuperar_c2";
+import create from "./Crear_Cuenta/create";
+import cambio from "./Recuperar_Cuenta/cambio_e";
+
 
 const Stack = createStackNavigator();
 
@@ -22,7 +26,21 @@ function Stacks() {
                     headerShown: false,
                 }}
             />
-            {/* <Stack.Screen name="HomeBtnStack" component={HomeBtn}/> */}
+            <Stack.Screen name="Recuperar_c2" component={recuperar_c2}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <Stack.Screen name="Formulario" component={create}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <Stack.Screen name="Exito" component={cambio}
+                options={{
+                    headerShown: false,
+                }}
+            />
         </Stack.Navigator>
     );
 }

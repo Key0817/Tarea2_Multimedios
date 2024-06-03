@@ -4,33 +4,33 @@ import { Button, Image, StyleSheet, Text, TextInput, View,TouchableOpacity } fro
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-export default function Login(){
-  const navigation = useNavigation();
+export default function recuperar_1(){
+
+  const navigation=useNavigation()
 
   return (
-
     
     <View style={styles.container}>
       {/* <Image source={require('./assets/headerLogo.png')}/> */}
 
-      <Text style={styles.txtBienve}>Bienvenido!</Text>
-      <Text style={styles.titleAcc}>Ingresar con tu cuenta</Text>
+      <Text style={styles.txtBienve}>Recuperar Cuenta</Text>
+
+      <Text style={styles.titleAcc} >Ingrese su correo electrónico para recuperar su cuenta:</Text>
 
       <TextInput style={styles.txtInput} placeholder='multimedios@gmail.com'></TextInput>
-      <TextInput style={styles.txtInput} placeholder='Contraseña:'></TextInput>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Recuperar_c1")}>   
-      <Text style={styles.txtPass} >¿Has olvidado su contraseña?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>   
+      <Text style={styles.txtPass}>Iniciar Sesión</Text>
       </TouchableOpacity>   
 
-      <TouchableOpacity >
+      <TouchableOpacity onPress={() => navigation.navigate("Recuperar_c2")} >
       <LinearGradient
         colors={['#00C1BB', '#005B58']}
         start={{x:0, y:0}}
         end={{x:1, y:1}}
         style={styles.btnLogin}
         >
-        <Text style={styles.txtLogin} >Iniciar Sesion</Text>
+        <Text style={styles.txtLogin} >Continuar</Text>
       </LinearGradient>     
       </TouchableOpacity>
 
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     color: 'gray',
     textAlign: 'left',
     paddingLeft: 30,
+    marginTop: 60,
   },
 
   txtInput: {
