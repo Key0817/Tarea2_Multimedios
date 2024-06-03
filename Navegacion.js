@@ -6,7 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Login_App/login";
 import recuperar_1 from "./Recuperar_Cuenta/recuperar_c1";
 import recuperar_c2 from "./Recuperar_Cuenta/recuperar_c2";
-import create from "./Crear_Cuenta/create";
+import create from "./Login_App/create";
 import cambio from "./Recuperar_Cuenta/cambio_e";
 
 

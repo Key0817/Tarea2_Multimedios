@@ -1,6 +1,6 @@
 import React from "react"
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
