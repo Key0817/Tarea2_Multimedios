@@ -1,17 +1,17 @@
-
+import React from "react"
 import { StatusBar } from 'expo-status-bar';
 import { Button, Image, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from "@react-navigation/native";
 
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+export default function Login(){
+  const navigation = useNavigation();
 
-// const Stack = createNativeStackNavigator();
-
-export default function App() {
   return (
+
+    
     <View style={styles.container}>
-      <Image source={require("./assets/headerLogo.png")}/>
+      {/* <Image source={require('./assets/headerLogo.png')}/> */}
 
       <Text style={styles.txtBienve}>Bienvenidos!</Text>
       <Text style={styles.titleAcc}>Ingresar con tu cuenta</Text>
@@ -19,8 +19,8 @@ export default function App() {
       <TextInput style={styles.txtInput} placeholder='multimedios@gmail.com'></TextInput>
       <TextInput style={styles.txtInput} placeholder='Contraseña:'></TextInput>
 
-      <TouchableOpacity >   
-      <Text style={styles.txtPass}>¿Has olvidado su contraseña?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("Recuperar_c1")}>   
+      <Text style={styles.txtPass} >¿Has olvidado su contraseña?</Text>
       </TouchableOpacity>   
 
       <TouchableOpacity >
@@ -41,10 +41,12 @@ export default function App() {
 
       <StatusBar style="auto" />
 
-    </View>
 
+    </View>
   );
+
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -128,7 +130,4 @@ const styles = StyleSheet.create({
     alignItems:'center',
     fontWeight: 'bold',
   },
-
-
-
 });
