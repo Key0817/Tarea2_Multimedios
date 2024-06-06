@@ -11,7 +11,7 @@ export default function Login(){
 
     
     <View style={styles.container}>
-      {/* <Image source={require('./assets/headerLogo.png')}/> */}
+      <Image source={require('../assets/img.png')} style={{width: '100%'}}/> 
 
       <Text style={styles.txtBienve}>Bienvenido!</Text>
       <Text style={styles.titleAcc}>Ingresar con tu cuenta</Text>

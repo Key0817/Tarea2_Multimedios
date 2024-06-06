@@ -4,20 +4,19 @@ import { Image, StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-export default function cambio(){
+export default function Cambio(){
 
   const navigation=useNavigation()
 
   return (
     
     <View style={styles.container}>
-      {/* <Image source={require('./assets/headerLogo.png')}/> */}
 
       <Text style={styles.txtBienve}>Cambio exitoso</Text>
 
-      <Text style={styles.titleAcc} >Ya puedes iniciar sesión con tu nueva contraseña</Text>
+      <Image source={require('../assets/Listo.png')} style={{width: 200, height: 200, marginLeft: 'auto', marginRight:'auto'}} /> 
 
-        {/* <Image source={require('./assets/Listo.png')}/> */}
+      <Text style={styles.titleAcc} >Ya puedes iniciar sesión con tu nueva contraseña</Text>
 
       <TouchableOpacity onPress={() => navigation.navigate("Login")} >
       <LinearGradient
@@ -63,7 +62,8 @@ const styles = StyleSheet.create({
     color: 'gray',
     textAlign: 'left',
     paddingLeft: 30,
-    marginTop: 60,
+    marginTop: 25,
+
   },
 
   txtInput: {

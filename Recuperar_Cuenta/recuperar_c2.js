@@ -4,14 +4,14 @@ import { Image, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-export default function recuperar_c2(){
+export default function Recuperar_c2(){
 
   const navigation=useNavigation()
 
   return (
     
     <View style={styles.container}>
-      {/* <Image source={require('./assets/headerLogo.png')}/> */}
+      <Image source={require('../assets/img.png')} style={{width: '100%'}}/> 
 
       <Text style={styles.txtBienve}>Recuperar Cuenta</Text>
 
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     color: 'gray',
     textAlign: 'left',
     paddingLeft: 30,
-    marginTop: 60,
+    marginTop: 10,
   },
 
   txtInput: {
@@ -131,5 +131,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     alignItems:'center',
     fontWeight: 'bold',
+    marginBottom: 10,
   },
 });

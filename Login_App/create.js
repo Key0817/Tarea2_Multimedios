@@ -4,14 +4,14 @@ import { Image, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-export default function create(){
+export default function Create(){
 
   const navigation=useNavigation()
 
   return (
     
     <View style={styles.container}>
-      {/* <Image source={require('./assets/headerLogo.png')}/> */}
+      <Image source={require('../assets/img.png')} style={{width: '100%'}}/> 
 
       <Text style={styles.txtBienve}>Crear Cuenta</Text>
 
@@ -38,7 +38,7 @@ export default function create(){
       <Text style={styles.txtRegistrarse}>Iniciar Sesión</Text>
       </TouchableOpacity>  
 
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
 
 
     </View>
@@ -47,14 +47,15 @@ export default function create(){
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    // alignItems: 'center',
-    justifyContent: 'center',
-  },
+  // container: {
+  //   flex: 0.9,
+  //   backgroundColor: '#fff',
+  //   // alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
 
   txtBienve: {
+
     fontSize: 50,
     fontWeight: 'bold',
     color: '#34434D',
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     color: 'gray',
     textAlign: 'left',
     paddingLeft: 30,
-    marginTop: 60,
+    marginTop: 10,
   },
 
   txtInput: {
@@ -123,6 +124,7 @@ const styles = StyleSheet.create({
   },
 
   txtRegistrarse: {
+    marginBottom: 10,
     textAlign: 'center',
     color: '#00C1BB',
     fontSize: 15,
